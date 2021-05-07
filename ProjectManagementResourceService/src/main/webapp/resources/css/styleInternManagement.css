@@ -1,0 +1,101 @@
+*, :before, :after {
+  box-sizing: border-box;
+}
+
+.unstyled {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.unstyled a {
+  text-decoration: none;
+}
+
+.list-inline {
+  overflow: hidden;
+}
+.list-inline li {
+  float: left;
+}
+
+.InternManagement.header {
+  position: absolute;
+  left: 0;
+  top: 1;
+  bottom: 1;
+  width: 17.5em;
+  height: 33em;
+  background: #35302D;
+  overflow: hidden;
+}
+
+.InternManagement.logo {
+  
+  font: 300 2em "Source Sans Pro", Helvetica, Arial, sans-serif;
+  text-align: center;
+  padding: 10%;
+  margin: 0;
+}
+.InternManagement.logo a {
+  display: block;
+  padding: 1em 0;
+  color: #DFDBD9;
+  text-decoration: none;
+  transition: .15s linear color;
+}
+.InternManagement.logo a:hover {
+  color: #fff;
+}
+.InternManagement.logo a:hover span {
+  color: #DF4500;
+}
+.InternManagement.logo span {
+  font-weight: 700;
+  transition: .15s linear color;
+}
+
+.InternManagement.main-nav ul {
+  border-top: solid 1px #3C3735;
+}
+.InternManagement.main-nav li {
+  border-bottom: solid 1px #3C3735;
+}
+.InternManagement.main-nav a {
+  padding: 1.1em 0;
+  color: #DFDBD9;
+  font: 400 1.125em "Source Sans Pro", Helvetica, Arial, sans-serif;
+  text-align: center;
+  
+}
+.InternManagement.main-nav a:hover {
+  color: #fff;
+}
+
+
+
+.InternManagement.list-hover-slide li {
+  position: relative;
+  overflow: hidden;
+}
+.InternManagement.list-hover-slide a {
+  display: block;
+  position: relative;
+  z-index: 1;
+  transition: .35s ease color;
+}
+.InternManagement.list-hover-slide a:before {
+  content: '';
+  display: block;
+  z-index: -1;
+  position: absolute;
+  left: -100%;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border-right: solid 5px #DF4500;
+  background: #3C3735;
+  transition: .35s ease left;
+}
+.InternManagement.list-hover-slide a.is-current:before, .list-hover-slide a:hover:before {
+  left: 0;
+}

@@ -1,0 +1,7 @@
+.container-fluid{
+    padding: 0;
+  }
+
+  .nav.navbar-nav li a {
+    color: white;
+}

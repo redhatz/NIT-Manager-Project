@@ -1,0 +1,103 @@
+package com.projectmanagement.model;
+
+import java.util.Objects;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import io.swagger.v3.oas.annotations.media.Schema;
+import org.springframework.validation.annotation.Validated;
+import javax.validation.Valid;
+import javax.validation.constraints.*;
+
+/**
+ * InlineResponse200
+ */
+@Validated
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2021-03-22T08:22:53.346Z[GMT]")
+
+
+public class DeleteResponseSuccess   {
+  @JsonProperty("statusCode")
+  private int statusCode;
+
+  @JsonProperty("statusMessage")
+  private String statusMessage = null;
+
+  public DeleteResponseSuccess statusCode(int statusCode) {
+    this.statusCode = statusCode;
+    return this;
+  }
+
+  /**
+   * Get statusCode
+   * @return statusCode
+   **/
+  @Schema(example = "200", description = "")
+  
+    public int getStatusCode() {
+    return statusCode;
+  }
+
+  public void setStatusCode(int i) {
+    this.statusCode = i;
+  }
+
+  public DeleteResponseSuccess statusMessage(String statusMessage) {
+    this.statusMessage = statusMessage;
+    return this;
+  }
+
+  /**
+   * Get statusMessage
+   * @return statusMessage
+   **/
+  @Schema(example = "Successfully deleted the record", description = "")
+  
+    public String getStatusMessage() {
+    return statusMessage;
+  }
+
+  public void setStatusMessage(String statusMessage) {
+    this.statusMessage = statusMessage;
+  }
+
+
+  @Override
+  public boolean equals(java.lang.Object o) {
+    if (this == o) {
+      return true;
+    }
+    if (o == null || getClass() != o.getClass()) {
+      return false;
+    }
+    DeleteResponseSuccess inlineResponse200 = (DeleteResponseSuccess) o;
+    return Objects.equals(this.statusCode, inlineResponse200.statusCode) &&
+        Objects.equals(this.statusMessage, inlineResponse200.statusMessage);
+  }
+
+  @Override
+  public int hashCode() {
+    return Objects.hash(statusCode, statusMessage);
+  }
+
+  @Override
+  public String toString() {
+    StringBuilder sb = new StringBuilder();
+    sb.append("class InlineResponse200 {\n");
+    
+    sb.append("    statusCode: ").append(toIndentedString(statusCode)).append("\n");
+    sb.append("    statusMessage: ").append(toIndentedString(statusMessage)).append("\n");
+    sb.append("}");
+    return sb.toString();
+  }
+
+  /**
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
+   */
+  private String toIndentedString(java.lang.Object o) {
+    if (o == null) {
+      return "null";
+    }
+    return o.toString().replace("\n", "\n    ");
+  }
+}
